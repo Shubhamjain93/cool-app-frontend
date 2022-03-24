@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="home.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+     
+    <br>
+    <nav>
+        <a href="#">Welcome!!</a>
+        <a href="#">Shop Closed</a>
+        <a href="#">Open</a>
+        
+        <div class="animation start-home"></div>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>     
+        </label>
+        
+    </nav>
+    <div id="nav-placeholder">
+
+
+    </div>
+
+    <script>
+    $(function(){
+        $("#nav-placeholder").load("nav.html");
+    });
+    </script>
+</body>
+</html>
