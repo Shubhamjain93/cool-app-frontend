@@ -98,6 +98,23 @@ form h3{
 .input-box.button input:hover{
   background: #0e4bf1;
 }
+
+.error{
+    display: none;
+    font-size: .8;
+    color: rgb(255, 41, 41);
+    margin: 5px 0;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    user-select: none;
+    opacity: 1;
+}
+
+.show{
+    display: block;
+    opacity: 1;
+}
+
 form .text h3{
  color: #333;
  width: 100%;
