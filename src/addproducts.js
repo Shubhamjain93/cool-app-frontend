@@ -19,21 +19,14 @@ additem.addEventListener('click', () => {
 
 })
 
-// imahe upload
 
-let uploadInput = document.querySelector('#uploadimage');
-let imagePath = 'img/noImage.png';
+$("#uploadimage").change(async ($event) => {
+    let file = $event.target.files[0]
+    var imgRef = storage.child(file.name);
 
-uploadInput.addEventListener('change', () => {
-    const file = uploadimage.files[0];
-    let imageUrl;
+    let result = await imgRef.put(file)
+    let url = await result.ref.getDownloadURL()
+    console.log({downloadUrl: url});
 
-    if (file.type.includes('image')) {
-
-        fetch('/s3url').then(res => res.json())
-            .then(url => {
-                console.log(url);
-            })
-    }
 
 })
